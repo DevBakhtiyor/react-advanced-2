@@ -10,7 +10,10 @@ const UseStateGotcha = () => {
     //   return newState;
     // });
     setTimeout(() => {
-      setValue(value + 1);
+      console.log('clicked the button');
+      setValue(currentState => {
+        return currentState + 1;
+      });
     }, 3000);
   };
   return (
